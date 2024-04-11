@@ -57,7 +57,7 @@ const translate = (json, parentKey, depth, config) => {
 
 
 
-export const json2xml = (json, config) => {
+const json2xml = (json, config) => {
 
   // default config
   config = {
@@ -73,5 +73,5 @@ export const json2xml = (json, config) => {
   return prefix + translate(json, config.root, 0, config);
 }
 
-
+module.exports ={ json2xml }
 

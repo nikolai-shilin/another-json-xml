@@ -4,7 +4,8 @@ Translates JSON to XML. In case of array, it will create a new element for each 
 
 how to import
 ```
-import { json2xml } from './index.js';
+const { json2xml } = require('another-json-xml');
+
 ```
 
 how to use

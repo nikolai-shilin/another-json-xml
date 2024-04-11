@@ -1,6 +1,6 @@
 {
   "name": "another-json-xml",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Another json to xml translator.",
   "main": "index.js",
   "scripts": {
