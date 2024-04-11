@@ -1,5 +1,5 @@
 {
-  "name": "another-json2xml",
+  "name": "anotherJsonToXml",
   "version": "1.0.0",
   "description": "Another json to xml translator.",
   "main": "index.js",
