@@ -1,0 +1,24 @@
+{
+  "name": "another-json2xml",
+  "version": "1.0.0",
+  "description": "Another json to xml translator.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolai-shilin/another-json2xml.git"
+  },
+  "keywords": [
+    "json",
+    "xml"
+  ],
+  "author": "Nikolai Shilin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikolai-shilin/another-json2xml/issues"
+  },
+  "homepage": "https://github.com/nikolai-shilin/another-json2xml#readme"
+}
