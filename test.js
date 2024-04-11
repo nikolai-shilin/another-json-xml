@@ -98,6 +98,23 @@ const json = {
 console.log(
   json2xml(
     json,
-   
+    {
+      root: 'root',
+      tab: '\t',
+      exceptions: [
+        '_id',
+        '__v',
+        'id',
+        'signatureFilename',
+        'stampFilename',
+        'stampedsignatureFilename',
+        'logoFilename',
+        'isImportedFromKartoteka',
+        'default',
+        'createdAt',
+        'updatedAt',
+        'userId'
+      ]
+      }
   )
 );
