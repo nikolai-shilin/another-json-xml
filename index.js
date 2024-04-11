@@ -10,14 +10,14 @@ const getTagName = (currentKey, parentKey) =>
 const translate = (json, parentKey, depth, config) => {
 
   let {
-    tab,
+    indent,
     exceptions,
     minify
   } = config;
 
   let xml = '';
-  let eol = minify ? '': '\n';
-  tab = minify ? '': tab;
+  let eol = minify ? '' : '\n';
+  indent = minify ? '' : indent;
 
   for (let key in json) {
     if (exceptions.includes(key)) continue;
@@ -29,7 +29,7 @@ const translate = (json, parentKey, depth, config) => {
     } else {
       let tag = getTagName(key, parentKey)
 
-      xml += tab.repeat(depth + 1)
+      xml += indent.repeat(depth + 1)
 
       if (typeof json[key] !== 'undefined') {
         xml += '<' + tag + '>'
@@ -43,11 +43,11 @@ const translate = (json, parentKey, depth, config) => {
     }
   }
   let result = ''
-  result += tab.repeat(depth)
+  result += indent.repeat(depth)
   result += '<' + parentKey + '>'
   result += eol
   result += xml
-  result += tab.repeat(depth)
+  result += indent.repeat(depth)
   result += '</' + parentKey + '>'
   result += eol
 
@@ -62,13 +62,13 @@ export const json2xml = (json, config) => {
   // default config
   config = {
     root: 'root',
-    tab: '\t',
+    indent: '\t',
     exceptions: [],
     minify: false,
     ...config
   }
 
-  const prefix = '<?xml version="1.0" encoding="UTF-8"?>' + (config.minify ? '': '\n');
+  const prefix = '<?xml version="1.0" encoding="UTF-8"?>' + (config.minify ? '' : '\n');
 
   return prefix + translate(json, config.root, 0, config);
 }
