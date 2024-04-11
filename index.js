@@ -68,7 +68,9 @@ export const json2xml = (json, config) => {
     ...config
   }
 
-  return translate(json, config.root, 0, config);
+  const prefix = '<?xml version="1.0" encoding="UTF-8"?>' + (config.minify ? '': '\n');
+
+  return prefix + translate(json, config.root, 0, config);
 }
 
 
