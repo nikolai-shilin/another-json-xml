@@ -1,5 +1,4 @@
-import {json2xml} from './index.js';
-
+const { json2xml } = require('./index');
 
 const json = {
   "acceptanceCertificate": {
