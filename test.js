@@ -9,11 +9,11 @@ const json = {
       "counterpartTitle": "Заказчик",
       "part": {
           "id": "eac4e604-d8ca-4e98-93a4-ab6196342830",
-          "userId": "quidox",
+          "userId": "eac4e604",
           "createdAt": "2023-10-01T19:11:52.174Z",
           "updatedAt": "2023-10-01T19:11:52.174Z",
           "unp": "193566299",
-          "name": "ООО \"КвиДокс\"",
+          "name": "ООО \"Докс\"",
           "address": "220092, Беларусь, г. Минск, ул. Столетова, дом 7Б, оф. 615",
           "contactPersonTitle": "Директор",
           "contactPersonName": "Борюсюк В.А.",
@@ -34,7 +34,7 @@ const json = {
       },
       "counterpart": {
           "id": "6dba7205-7e4f-4dac-8b3c-7a8318fa76d4",
-          "userId": "quidox",
+          "userId": "2134234",
           "createdAt": "2023-10-04T07:50:51.132Z",
           "updatedAt": "2023-10-04T07:50:51.132Z",
           "unp": "192287331",
@@ -100,7 +100,7 @@ console.log(
     {
       root: 'root',
       tab: '\t',
-      exceptions: [
+      exclude: [
         '_id',
         '__v',
         'id',

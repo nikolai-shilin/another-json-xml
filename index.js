@@ -2,8 +2,8 @@ const getTagName = (currentKey, parentKey, config) =>
   // is currentKey a number like in case of an array
   isNaN(currentKey)
       ? currentKey
-      : config.listItemNames[parentKey]
-        ? config.listItemNames[parentKey]
+      : config.singulars[parentKey]
+        ? config.singulars[parentKey]
         : parentKey.substring(0, parentKey.length - 1);
 
 
@@ -13,7 +13,7 @@ const translate = (json, parentKey, depth, config) => {
 
   let {
     indent,
-    exceptions,
+    exclude,
     minify
   } = config;
 
@@ -22,7 +22,7 @@ const translate = (json, parentKey, depth, config) => {
   indent = minify ? '' : indent;
 
   for (let key in json) {
-    if (exceptions.includes(key)) continue;
+    if (exclude.includes(key)) continue;
 
     if (json[key] instanceof Object) {
       let tag = getTagName(key, parentKey, config)
@@ -65,9 +65,9 @@ const json2xml = (json, config) => {
   config = {
     root: 'root',
     indent: '\t',
-    exceptions: [],
+    exclude: [],
     minify: false,
-    listItemNames: {},
+    singulars: {},
     ...config
   }
 

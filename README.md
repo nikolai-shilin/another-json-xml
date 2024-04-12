@@ -28,9 +28,9 @@ config( optional)
 const config = {
   root: 'root',
   indent: '  ',
-  exceptions: ['_id'],
+  exclude: ['_id'],
   minify: false,
-  listItemNames: {
+  singulars: {
     'cars': 'car'
   }
 }
@@ -38,6 +38,6 @@ const config = {
 
 - `root` - root element name, default is 'root'
 - `indent` - indent string, default is '\t'
-- `exceptions` - array of keys that should be ignored, default is []
+- `exclude` - array of keys that should be ignored, default is []
 - `minify` - minify xml, default is false, in case it is true `indent` will be ignored
-- `listItemNames` - dictionary for list elements, default is {}, in case of `cars` it will be `car`
+- `singulars` - dictionary for list elements, default is {}, in case of `cars` it will be `car`
