@@ -1,15 +1,16 @@
-# another-json2xml
+# another json/xml converter
 
-Translates JSON to XML. In case of array, it will create a new element for each item named as parent element without the last symbol e.g. 's'.
+Converts JSON or object to XML. In case of array, it will create a new element for each item named as parent element without the last symbol e.g. 's'.
 
-how to import
+## how to install
 ```
-const { json2xml } = require('another-json-xml');
-
+npm install another-json-xml --save
 ```
 
 how to use
 ```
+const { json2xml } = require('another-json-xml');
+
 const json = {
   "name": "John",
   "age": 30,
@@ -22,13 +23,15 @@ const json = {
 const xml = json2xml(json, config);
 ```
 
-config
+config( optional)
 ```
 const config = {
   root: 'root',
   indent: '  ',
   exceptions: ['_id'],
   minify: false,
+  listItemNames: {
+    'cars': 'car'
   }
 }
 ```
@@ -37,3 +40,4 @@ const config = {
 - `indent` - indent string, default is '\t'
 - `exceptions` - array of keys that should be ignored, default is []
 - `minify` - minify xml, default is false, in case it is true `indent` will be ignored
+- `listItemNames` - dictionary for list elements, default is {}, in case of `cars` it will be `car`

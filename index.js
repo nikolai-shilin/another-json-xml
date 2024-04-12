@@ -1,8 +1,10 @@
-const getTagName = (currentKey, parentKey) =>
+const getTagName = (currentKey, parentKey, config) =>
   // is currentKey a number like in case of an array
   isNaN(currentKey)
-    ? currentKey
-    : parentKey.substring(0, parentKey.length - 1);
+      ? currentKey
+      : config.listItemNames[parentKey]
+        ? config.listItemNames[parentKey]
+        : parentKey.substring(0, parentKey.length - 1);
 
 
 
@@ -23,11 +25,11 @@ const translate = (json, parentKey, depth, config) => {
     if (exceptions.includes(key)) continue;
 
     if (json[key] instanceof Object) {
-      let tag = getTagName(key, parentKey)
+      let tag = getTagName(key, parentKey, config)
       xml += translate(json[key], tag, depth + 1, config);
 
     } else {
-      let tag = getTagName(key, parentKey)
+      let tag = getTagName(key, parentKey, config)
 
       xml += indent.repeat(depth + 1)
 
@@ -65,6 +67,7 @@ const json2xml = (json, config) => {
     indent: '\t',
     exceptions: [],
     minify: false,
+    listItemNames: {},
     ...config
   }
 
