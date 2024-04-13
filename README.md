@@ -48,10 +48,21 @@ result
 </root>
 ```
 
-# Config( optional)
+# Config (optional)
 
-You can pass config object as a second parameter to `json2xml` function e.g. `const xml = json2xml(json, config);`.
-Or wrap it in a function `const getConfiguredJson2Xml = config => json => json2xml(json, config);` for a shared config settings and use as `const convert = getConfiguredJson2Xml(config);`.
+You can pass config object as a second parameter to `json2xml` function e.g.
+```
+const xml = json2xml(json, config);
+```
+
+Or wrap it in a function
+```
+const getConfiguredJson2Xml = config => json => json2xml(json, config);
+```
+for a shared config settings and use as
+```
+const convert = getConfiguredJson2Xml(config);
+```
 
 Default config is:
 
