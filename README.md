@@ -1,13 +1,13 @@
-# another json/xml converter
+# Another json/xml converter
 
 Converts JSON or object to XML. In case of array, it will create a new element for each item named as parent element without the last symbol e.g. `cars` -> `car` items  or with a name defined in a config parameter `singulars`: `people: 'person'`.
 
-## how to install
+## How to install
 ```
 npm install another-json-xml --save
 ```
 
-# how to use
+# How to use
 ```
 const { json2xml } = require('another-json-xml');
 
@@ -36,7 +36,7 @@ result
 	<age>30</age>
 	<cars>
 		<car>
-			<name>Ford</name>
+      <name>Ford</name>
 		</car>
 		<car>
 			<name>BMW</name>
@@ -48,10 +48,10 @@ result
 </root>
 ```
 
-# config( optional)
+# Config( optional)
 
 You can pass config object as a second parameter to `json2xml` function e.g. `const xml = json2xml(json, config);`.
-Or wrap it in a function `const toXml = config => json2xml(json, config)` for a shared config settings.
+Or wrap it in a function `const getConfiguredJson2Xml = config => json => json2xml(json, config);` for a shared config settings and use as `const convert = getConfiguredJson2Xml(config);`.
 
 Default config is:
 
