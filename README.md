@@ -16,7 +16,7 @@ const json = {
   "age": 30,
   "cars": [
     {
-    "name": "Ford"
+			"name": "Ford"
     }, {
       "name": "BMW"
     }, {
@@ -36,7 +36,7 @@ result
 	<age>30</age>
 	<cars>
 		<car>
-      <name>Ford</name>
+			<name>Ford</name>
 		</car>
 		<car>
 			<name>BMW</name>
