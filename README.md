@@ -55,13 +55,20 @@ You can pass config object as a second parameter to `json2xml` function e.g.
 const xml = json2xml(json, config);
 ```
 
-Or wrap it in a function
+Or wrap it in a function for a shared config settings and use as a function e.g.
 ```
-const getConfiguredJson2Xml = config => json => json2xml(json, config);
-```
-for a shared config settings and use as
-```
-const convert = getConfiguredJson2Xml(config);
+import { getConfiguredJson2Xml } from 'another-json-xml';
+
+const convert = getConfiguredJson2Xml({
+  root: 'root',
+  indent: '\t',
+  exclude: [],
+  minify: false,
+  singulars: {},
+});
+const json2xml = getConfiguredJson2Xml(config);
+const xml = json2xml(json);
+console.log(xml);
 ```
 
 Default config is:

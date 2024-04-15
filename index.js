@@ -76,5 +76,9 @@ const json2xml = (json, config) => {
   return prefix + translate(json, config.root, 0, config);
 }
 
-module.exports ={ json2xml }
+const getConfiguredJson2Xml = (config) => {
+  return (json) => json2xml(json, config)
+}
+
+module.exports ={ json2xml, getConfiguredJson2Xml }
 
