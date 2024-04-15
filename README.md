@@ -66,7 +66,9 @@ const convert = getConfiguredJson2Xml({
   minify: false,
   singulars: {},
 });
+
 const json2xml = getConfiguredJson2Xml(config);
+
 const xml = json2xml(json);
 console.log(xml);
 ```
@@ -93,9 +95,9 @@ e.g.
 
 ```
 const config = {
-  root: 'root',
-  indent: '\t',
-  exclude: ['age'],
+  root: 'secret-data',
+  indent: '    ',
+  exclude: ['age', 'salary', 'password'],
   minify: false,
   singulars: {
     people: 'person'
