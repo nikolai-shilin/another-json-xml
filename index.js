@@ -68,10 +68,11 @@ const json2xml = (json, config) => {
     exclude: [],
     minify: false,
     singulars: {},
+    declaration: '<?xml version="1.0" encoding="UTF-8"?>',
     ...config
   }
 
-  const prefix = '<?xml version="1.0" encoding="UTF-8"?>' + (config.minify ? '' : '\n');
+  const prefix = config.declaration + (config.minify ? '' : '\n');
 
   return prefix + translate(json, config.root, 0, config);
 }

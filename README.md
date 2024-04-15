@@ -82,6 +82,7 @@ const config = {
   exclude: [],
   minify: false,
   singulars: {},
+  declaration: '<?xml version="1.0" encoding="UTF-8"?>'
 }
 ```
 
@@ -90,6 +91,7 @@ const config = {
 - `exclude` - array of keys that should be ignored e.g. `['_id']`, default is []
 - `minify` - minify xml, default is `false`, in case it is true `indent` will be ignored
 - `singulars` - dictionary for list elements, default is {} and be default in case of `cars` it will be `car` (removes last symbol from the key name)
+- `declaration` - add xml declaration, default is `<\?xml version="1.0" encoding="UTF-8"\?>`
 
 e.g.
 

@@ -1,6 +1,6 @@
 {
   "name": "another-json-xml",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Another json to xml convertor.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,17 @@
   },
   "keywords": [
     "json",
-    "xml"
+    "xml",
+    "convertor",
+    "convertor",
+    "json2xml",
+    "transform",
+    "json-to-xml",
+    "transformer",
+    "translate",
+    "translater",
+    "translator",
+    "formatter"
   ],
   "author": "Nikolai Shilin",
   "license": "ISC",
