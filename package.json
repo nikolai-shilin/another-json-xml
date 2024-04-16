@@ -1,6 +1,6 @@
 {
-  "name": "another-json-xml",
-  "version": "2.0.7",
+  "name": "@7ft/another-json-xml",
+  "version": "2.0.8",
   "description": "Another json to xml convertor.",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,9 @@
   ],
   "author": "Nikolai Shilin",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/nikolai-shilin/another-json-xml/issues"
   },
