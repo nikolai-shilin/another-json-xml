@@ -57,17 +57,15 @@ const xml = json2xml(json, config);
 
 Or wrap it in a function for a shared config settings and use as a function e.g.
 ```
-import { getConfiguredJson2Xml } from 'another-json-xml';
+const { getConfiguredJson2Xml } = require('another-json-xml');
 
-const convert = getConfiguredJson2Xml({
+const json2xml = getConfiguredJson2Xml({
   root: 'root',
   indent: '\t',
   exclude: [],
   minify: false,
   singulars: {},
 });
-
-const json2xml = getConfiguredJson2Xml(config);
 
 const xml = json2xml(json);
 console.log(xml);
